@@ -1,5 +1,5 @@
 require([
-    '../../js/pro'
+    './pro'
 ], function(){
 
     // CountUp
