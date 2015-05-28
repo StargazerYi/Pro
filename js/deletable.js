@@ -114,7 +114,7 @@ define(['./event', './data', './requestAnimationFrame'], function () {
 
                 if(!this._opened && deltaX < -10){
                     this._state = 0;
-                    return;
+                    // return; // Modified by yickli. Don't need return.
                 }
                 // update pre position
                 this._pre = cur;
