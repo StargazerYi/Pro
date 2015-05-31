@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>学生中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="css/pro.css?embed" />
+  <link rel="stylesheet" type="text/css" href="vendor/ionicons/css/ionicons.css" />
+  <!-- 这个页面的CSS -->
+  <link rel="stylesheet" type="text/css" href="css/studentMain.css">
+</head>
+
+<body class="ui-app">
+
+  <!-- 三个页面顶部的标签，用来切换子页面 -->
+  <div class="ui-top-bar js-no-bounce">
+    <!-- 第一页顶部标签 -->
+    <div class="ui-tab page1 js-active">
+      <ul class="ui-groupbutton" role="tablist">
+        <li class="ui-button js-active" data-toggle="tab" data-target="#page1-tab1" aria-controls="tab1" role="tab">最新动态</li>
+      </ul>
+    </div>
+    <!-- 第二页顶部标签 -->
+    <div class="ui-tab page2">
+      <ul class="ui-groupbutton" role="tablist">
+
+        <li class="ui-button js-active" data-toggle="tab" data-target="#page1-tab1" aria-controls="tab1" role="tab">
+          公告
+          <!-- 红色气泡，显示有多少条未读公告 -->
+          <span class="ui-red-counter page2-counter" id="my-page2-counter1">1</span>
+        </li>
+
+        <li class="ui-button" data-toggle="tab" data-target="#page1-tab2" aria-controls="tab2" role="tab">
+          水电费
+          <!-- 红色气泡，显示有多少条未读水电费 -->
+          <span class="ui-red-counter page2-counter" id="my-page2-counter2">0</span>
+        </li>
+
+        <li class="ui-button" data-toggle="tab" data-target="#page1-tab3" aria-controls="tab3" role="tab">
+          快件
+          <!-- 红色气泡，显示有多少条未读快件 -->
+          <span class="ui-red-counter page2-counter" id="my-page2-counter3">3</span>
+        </li>
+
+      </ul>
+    </div>
+    <!-- 第三页顶部标签 -->
+    <div class="ui-tab page3">
+      <ul class="ui-groupbutton" role="tablist">
+        <li class="ui-button  js-active" data-toggle="tab" data-target="#page3-tab1" aria-controls="tab1" role="tab">个人中心</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 底部切换页面的标签 -->
+  <div class="ui-bottom-bar js-no-bounce" role="toolbar">
+    <a class="ui-bottom-bar-button js-active" role="button" data-toggle="tab" data-target=".page1">
+      <span class="ui-icon ion-home"></span>
+      <span class="ui-label">主页</span>
+    </a>
+    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".page2">
+      <span class="ui-icon ion-ios7-bell"></span>
+      <span class="ui-label">消息</span></span>
+      <span class="ui-red-counter" id="page2-counter-sum">
+    </a>
+    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".page3">
+      <span class="ui-icon ion-ios7-person"></span>
+      <span class="ui-label">用户</span>
+    </a>
+  </div>
+
+  <!-- 第一页：主页 -->
+  <div class="ui-page page1 js-active">
+    <div class="ui-page-content">
+
+      <!-- 公告栏 -->
+      <ul class="ui-list my-top-block">
+        <li class="ui-item arrow-right my-title"><a href="#"><span class="ui-icon ion-ios7-chatboxes"></span> 公告栏</a></li>
+        <li class="ui-item">
+          <a href="#">
+            <div class="my-sub-title"> 温馨提醒</div>
+            <div class="my-notice">
+              <p>天气转暖，地面潮湿，请同学们注意安全，千万不要在宿舍内点蚊香。</p>
+              <span class="my-date">2015年5月30日</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <!-- 最新消息 -->
+      <ul class="ui-list">
+        <li class="ui-item arrow-right my-title"><a href="#"><span class="ui-icon ion-ios7-bell"></span> 最新消息</a></li>
+        <!-- 第一条 -->
+        <li class="ui-item">
+          <a href="#">
+            <div class="my-sub-title"><span class="ui-icon ion-ios7-lightbulb"></span> 4月份水电费缴费</div>
+            <div class="my-notice">
+              <p>311宿舍，你们好，你们宿舍的水电费金额为100元，请在2015年6月1日前缴纳。</p>
+              <span class="my-date">2015年5月25日</span>
+            </div>
+          </a>
+        </li>
+        <!-- 第二条 -->
+        <li class="ui-item">
+          <a href="#">
+            <div class="my-sub-title"><span class="ui-icon ion-ios7-email"></span> 明信片送达</div>
+            <div class="my-notice">
+              <p>311宿舍小明同学，你的明信片已经到了，在楼下送达室，请及时领取。</p>
+              <span class="my-date">2015年5月25日</span>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- 第二页：消息 -->
+  <div class="ui-page page2">
+    <div class="ui-page-content">
+
+      <!-- 历史公告 -->
+      <div class="ui-tab js-active" id="page2-tab1" role="tabpanel">
+        <h3 class="ui-caption">历史公告</h3>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-chatboxes"></span> 温馨提醒</div>
+              <div class="my-notice">
+                <p>天气转暖，地面潮湿，请同学们注意安全，千万不要在宿舍内点蚊香。</p>
+                <span class="my-date">2015年5月30日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-chatboxes"></span> 单车通知</div>
+              <div class="my-notice">
+                <p>麻烦大家通知各宿舍同学 把停在楼下洗衣房的车今天之内搬走，周二之后可以停回来，否则将由楼委会成员将车挪至停车区 找不到的话后果自负 谢谢大家</p>
+                <span class="my-date">2015年3月10日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-chatboxes"></span> 假期留宿</div>
+              <div class="my-notice">
+                <p>放假期间要留在宿舍不回家过年的同学，要来宿管阿姨这里记录一下名字。麻烦通知宿舍同学，谢谢！</p>
+                <span class="my-date">2015年1月10日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 历史水电费消息 -->
+      <div class="ui-tab" id="page2-tab2" role="tabpanel">
+        <h3 class="ui-caption">历史水电费消息</h3>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-lightbulb"></span> 4月份水电费缴费</div>
+              <div class="my-notice">
+                <p>311宿舍，你们好，你们宿舍的水电费金额为100元，请在2015年6月1日前缴纳。</p>
+                <span class="my-date">2015年5月25日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-lightbulb"></span> 3月份水电费缴费</div>
+              <div class="my-notice">
+                <p>311宿舍，你们好，你们宿舍的水电费金额为120元，请在2015年4月25日前缴纳。</p>
+                <span class="my-date">2015年4月20日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-email"></span> 2月份水电费缴费</div>
+              <div class="my-notice">
+                <p>311宿舍，你们好，你们宿舍的水电费金额为90元，请在2015年3月27日前缴纳。</p>
+                <span class="my-date">2015年3月22日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 历史快件消息 -->
+      <div class="ui-tab" id="page2-tab3" role="tabpanel">
+        <h3 class="ui-caption">历史快件消息</h3>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-email"></span> 明信片送达</div>
+              <div class="my-notice">
+                <p>311宿舍小明同学，你的明信片已经到了，在楼下送达室，请及时领取。</p>
+                <span class="my-date">2015年4月20日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-email"></span> 快递送达</div>
+              <div class="my-notice">
+                <p>311宿舍小刚同学，你的快递已经到了，在楼下送达室，请及时领取。</p>
+                <span class="my-date">2015年3月15日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="ui-list">
+          <li class="ui-item">
+            <a href="#">
+              <div class="my-sub-title"><span class="ui-icon ion-ios7-email"></span> 明信片送达</div>
+              <div class="my-notice">
+                <p>311宿舍小明同学，你的明信片已经到了，在楼下送达室，请及时领取。</p>
+                <span class="my-date">2015年1月22日</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 第三页：用户 -->
+  <div class="ui-page page3">
+    <div class="ui-page-content">
+      <div class="ui-tab js-active" id="page3-tab1" role="tabpanel">
+
+        <ul class="ui-list my-top-block">
+          <li class="ui-item"><a href="#"> 姓名：<span id="my-student-info-name">小明</span></a></li>
+        </ul>
+        <ul class="ui-list my-top-block">
+          <li class="ui-item"><a href="#"> 手机：<span id="my-student-info-room">18819441111</span></a></li>
+        </ul>
+        <ul class="ui-list my-top-block">
+          <li class="ui-item"><a href="#"> 宿舍：<span id="my-student-info-room">311</span></a></li>
+        </ul>
+        <ul class="ui-list my-top-block">
+          <li class="ui-item"><a href="#"> 楼栋：<span id="my-student-info-building">至善园4号</span></a></li>
+        </ul>
+        
+        <!-- 两个按钮 -->
+        <p class="ui-panel">
+          <button class="ui-button ui-block ui-info" data-toggle="dialog" data-target="#myAlert1" data-type="alert" data-effect="from-below" data-cache="false">
+          <span class="ui-icon ion-ios7-personadd"></span>
+              加入宿舍
+          </button>
+          <button class="ui-button ui-block ui-info" data-toggle="dialog" data-target="#myAlert2" data-type="alert" data-effect="from-below" data-cache="false">
+          <span class="ui-icon ion-ios7-plus-outline"></span>
+              创建宿舍
+          </button>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 点击 加入宿舍 按钮后弹出的对话框 -->
+  <div id="myAlert1" role="alertdialog" class="ui-dialog" aria-labelledby="myAlertLable" aria-hidden="true" style="display: none;">
+    <div class="js-dialog-content ui-alert">
+      <div class="ui-alert-header"><h3 class="ui-alert-title" id="myAlertLable">加入宿舍</h3></div>
+      <div class="ui-alert-body" role="note"><p>点击确定加入一个新的宿舍</p></div>
+      <div class="ui-alert-footer">
+        <!-- 尽量避免使用 button 元素，在小米上是会有点击高亮边框 -->
+        <a data-dismiss="dialog" role="button" class="ui-alert-button" id="my-add-room">确定</a>
+        <a data-dismiss="dialog" role="button" class="ui-alert-button">返回</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 点击 创建宿舍 按钮后弹出的对话框 -->
+  <div id="myAlert2" role="alertdialog" class="ui-dialog" aria-labelledby="myAlertLable" aria-hidden="true" style="display: none;">
+    <div class="js-dialog-content ui-alert">
+      <div class="ui-alert-header"><h3 class="ui-alert-title" id="myAlertLable">创建宿舍</h3></div>
+      <div class="ui-alert-body" role="note"><p>点击确定创建一个新的宿舍</p></div>
+      <div class="ui-alert-footer">
+        <!-- 尽量避免使用 button 元素，在小米上是会有点击高亮边框 -->
+        <a data-dismiss="dialog" role="button" class="ui-alert-button" id="my-create-room">确定</a>
+        <a data-dismiss="dialog" role="button" class="ui-alert-button">返回</a>
+      </div>
+    </div>
+  </div>
+
+  <script data-main="js/studentMain.js" src="vendor/requirejs/require.js"></script>
+</body>
+</html>
