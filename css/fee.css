@@ -1,0 +1,96 @@
+#year-button {
+	margin-top: -3px;
+	width: 100px;
+}
+
+#month-button {
+	margin-top: -3px;
+	width: 100px;
+}
+
+.descend-img {
+	width: 9%;
+	height: 9%;
+	float: right;
+	margin-right: -5px;
+}
+
+.has-list {
+	height: 200px;
+}
+
+.date-list {
+	width: 100px;
+	max-height: 100px;
+	margin-top: -5px;
+	overflow-y: auto;
+}
+
+.date-list-item {
+	border: 1px solid #0079ff;
+	padding: 3px 2px 2px 1px;
+	color: #0079ff;
+	text-align: center;
+}
+
+.year-list {
+	margin-left: 34px;
+	display: none;
+}
+
+.month-list {
+	margin-left: 34px;
+	display: none;
+}
+
+.year-form {
+	margin-right: 20px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.month-form {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.is-click {
+	background-color: #0079ff;
+	color: #fff;
+}
+
+.no-click {
+	background-color: transparent;
+	color: #0079ff;
+}
+
+.info-input {
+	width: 110px;
+	min-height: 20px;
+	border: 1px solid #0079ff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-bottom: 3px;
+}
+
+.room-form {
+	width: 200px;
+}
+
+.reset {
+	position: relative;
+	margin-top: -15px;
+}
+
+.water-form {
+	width: 240px;
+}
+
+.elec-form {
+	width: 240px;
+}
+
+.commit-fee {
+	position: absolute;
+	bottom: 20px;
+}
