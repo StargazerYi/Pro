@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>缴费表单</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="css/pro.css?embed" />
+  <link rel="stylesheet" type="text/css" href="vendor/ionicons/css/ionicons.css" />
+  <link rel="stylesheet" type="text/css" href="css/fee.css" />
+  <!-- 这个页面的CSS -->
+  <!-- <link rel="stylesheet" href="css/<page>.css"> -->
+</head>
+
+<body class="ui-app">
+  <div class="ui-page page1 js-active">
+    <div class="ui-page-content">
+      <div class="ui-tab js-active date" role="tabpanel">
+        <h3 class="ui-caption">日期</h3>
+        <div class="ui-panel">
+          <div class="year-form">
+            年：
+            <button class="ui-button no-click" id="year-button"><span class="year">选择年份</span><img class="descend-img" src="img/descend.png"></button>
+            <ul class="date-list year-list">
+              <li class="date-list-item year-item no-click">2015</li>
+              <li class="date-list-item year-item no-click">2014</li>
+              <li class="date-list-item year-item no-click">2013</li>
+            </ul>
+          </div>
+
+          <div class="month-form">
+            月：
+            <button class="ui-button no-click" id="month-button"><span class="month">选择月份</span><img class="descend-img" src="img/descend.png"></button>
+            <ul class="date-list month-list">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-tab js-active room" role="tabpanel">
+        <h3 class="ui-caption">宿舍信息</h3>
+        <div class="ui-panel">
+          <div class="room-form">
+            宿舍号：
+            <input id="my-search-input" type="search" autocomplete="off" autocorrect="off" placeholder="请输入宿舍号" class="ui-search-input info-input">
+            <span id="my-search-reset" class="ui-search-reset reset">x</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-tab js-active fee" role="tabpanel">
+        <h3 class="ui-caption">水电费</h3>
+        <div class="ui-panel">
+          <div class="water-form">
+            水费（元）：
+            <input id="my-search-input" type="search" autocomplete="off" autocorrect="off" placeholder="请输入水费" class="ui-search-input info-input">
+            <span id="my-search-reset" class="ui-search-reset reset">x</span>       
+          </div>
+
+          <div class="elec-form">
+            电费（元）：
+            <input id="my-search-input" type="search" autocomplete="off" autocorrect="off" placeholder="请输入电费" class="ui-search-input info-input">
+            <span id="my-search-reset" class="ui-search-reset reset">x</span>            
+          </div>
+        </div>
+      </div>
+
+      <button class="ui-button ui-block ui-info commit-fee">确认提交</button>
+    </div>
+  </div>
+  <!-- 下面这一行的<page>同样修改 -->
+  <script data-main="js/fee" src="vendor/requirejs/require.js"></script>
+</body>
+</html>
