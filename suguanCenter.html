@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>宿管中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="css/pro.css?embed" />
+  <link rel="stylesheet" type="text/css" href="vendor/ionicons/css/ionicons.css" />
+  <!-- 这个页面的CSS -->
+  <link rel="stylesheet" type="text/css" href="css/suguanCenter.css">
+</head>
+
+<body class="ui-app">
+  <div class="ui-top-bar js-no-bounce">
+    <div class="ui-tab page3 js-active">
+      <ul class="ui-groupbutton" role="tablist">
+        <li class="ui-button  js-active" data-toggle="tab" data-target="#page3-tab1" aria-controls="tab1" role="tab">宿管中心</li>
+      </ul>
+    </div>
+  </div>
+  <!-- 宿管中心 -->
+  <div class="ui-page page3 js-active">
+    <div class="ui-page-content">
+      <div class="ui-tab js-active" id="page3-tab1" role="tabpanel">
+
+        <ul class="ui-list my-top-block">
+          <li class="ui-item"><a href="#"><span class="ui-icon ion-person my-icon"></span> 宿管姓名：<span id="my-suguan-info-name">刘大姐</span></a></li>
+        </ul>
+        <ul class="ui-list my-top-block">
+          <li class="ui-item"><a href="#"><span class="ui-icon ion-home my-icon"></span> 管理楼栋：<span id="my-suguan-info-building">至善园4号</span></a></li>
+        </ul>
+        <ul class="ui-list my-top-block">
+          <li class="ui-item"><a href="#"><span class="ui-icon ion-home my-icon"></span> 宿舍总数：<span id="my-suguan-info-totalroom">180</span></a></li>
+        </ul>
+        <!-- 两个按钮 -->
+        <p class="ui-panel">
+          <button class="ui-button ui-block ui-info" data-toggle="dialog" data-target="#myAlert2" data-type="alert" data-effect="from-below" data-cache="false">
+          <span class="ui-icon ion-ios7-plus-outline"></span>
+              创建楼栋
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 点击 创建楼栋 按钮后弹出的对话框 -->
+  <div id="myAlert2" role="alertdialog" class="ui-dialog" aria-labelledby="myAlertLable" aria-hidden="true" style="display: none;">
+    <div class="js-dialog-content ui-alert">
+      <div class="ui-alert-header"><h3 class="ui-alert-title" id="myAlertLable">创建楼栋</h3></div>
+      <div class="ui-alert-body" role="note"><p>点击确定创建一个新的楼栋</p></div>
+      <div class="ui-alert-footer">
+        <!-- 尽量避免使用 button 元素，在小米上是会有点击高亮边框 -->
+        <a data-dismiss="dialog" role="button" class="ui-alert-button" id="my-create-room">确定</a>
+        <a data-dismiss="dialog" role="button" class="ui-alert-button">返回</a>
+      </div>
+    </div>
+  </div>
+
+  <script data-main="js/suguanCenter.js" src="vendor/requirejs/require.js"></script>
+</body>
+</html>

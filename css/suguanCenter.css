@@ -1,0 +1,47 @@
+* {
+  font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+
+#page2-counter-sum {
+  top: 0;
+  right: 25%;
+}
+
+.ui-bottom-bar-button {
+  position: relative;
+}
+
+.my-notice {
+  line-height: 30px;
+  overflow: hidden;
+}
+
+.my-top-block {
+  margin-top: 20px;
+}
+
+.my-title > a {
+  font-weight: bold;
+  color: #0079FF !important;
+}
+
+.my-sub-title {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  /*color: #6E6E6E;*/
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.my-date {
+  float: right;
+  font-size: 0.9em;
+  margin-right: 10px;
+  color: #6E6E6E;
+}
+
+.my-icon {
+  text-align: center;
+  width: 18px;
+  color: #0079FF;
+}
